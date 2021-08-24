@@ -1,39 +1,32 @@
 import "./App.css";
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 //components
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import Home from "./components/Home";
-import Projects from "./components/Projects";
-import Resume from "./components/Resume";
-import ContactMe from "./components/ContactMe";
+import Navbar from "./components/Navbar.jsx";
+import Footer from "./components/Footer.jsx";
+import Header from "./components/Header.jsx";
+import Projects from "./components/Projects.jsx";
+import Resume from "./components/Resume.jsx";
+import Skills from "./components/Skills.jsx";
+import ContactMe from "./components/ContactMe.jsx";
 
 function App() {
   return (
     <div className="">
-      <Router>
+      <div className="flex flex-col h-screen">
         <Navbar />
-        <Switch>
-          <Route path="/" exact>
-            <Home />
-          </Route>
+        <Header />
+      </div>
 
-          <Route path="/projects">
-            <Projects />
-          </Route>
+      <Skills />
 
-          <Route path="/resume">
-            <Resume />
-          </Route>
+      <Projects />
 
-          <Route path="/contactme">
-            <ContactMe />
-          </Route>
-        </Switch>
-        <Footer />
-      </Router>
+      <Resume />
+
+      <ContactMe />
+
+      <Footer />
     </div>
   );
 }

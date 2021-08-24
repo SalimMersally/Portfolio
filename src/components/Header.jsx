@@ -1,13 +1,13 @@
 import React from "react";
-import gif from "../../assets/coding-freak.gif";
+import gif from "../assets/coding-freak.gif";
 
 function Header() {
   return (
-    <div className="flex md:flex-nowrap flex-wrap md:h-screen">
-      <div className="flex flex-col md:w-1/2 w-full p-5 justify-center">
+    <div className="flex md:flex-nowrap flex-wrap flex-grow md:px-20">
+      <div className="flex flex-col md:w-1/2 w-full p-2 justify-center">
         <img src={gif} alt="Coding GIF" className="h-auto w-4/5 m-auto" />
       </div>
-      <div className="flex flex-col md:w-1/2 w-full p-5 justify-center">
+      <div className="flex flex-col md:w-1/2 w-full p-2 justify-center">
         <h1 className="text-4xl font-extrabold m-5">
           Hello, I'm Salim Al Mersally
         </h1>

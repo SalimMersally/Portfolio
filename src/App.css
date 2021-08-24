@@ -1,0 +1,13 @@
+a img {
+  filter: invert(46%) sepia(2%) saturate(3317%) hue-rotate(182deg)
+    brightness(93%) contrast(83%);
+}
+
+a img:hover {
+  filter: invert(49%) sepia(24%) saturate(6900%) hue-rotate(200deg)
+    brightness(98%) contrast(97%);
+}
+
+.logo {
+  font-family: "Dancing Script", cursive;
+}
