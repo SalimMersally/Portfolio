@@ -12,27 +12,29 @@ import ContactMe from "./components/ContactMe";
 
 function App() {
   return (
-    <Router>
-      <Navbar />
-      <Switch>
-        <Route path="/" exact>
-          <Home />
-        </Route>
+    <div className="">
+      <Router>
+        <Navbar />
+        <Switch>
+          <Route path="/" exact>
+            <Home />
+          </Route>
 
-        <Route path="/projects">
-          <Projects />
-        </Route>
+          <Route path="/projects">
+            <Projects />
+          </Route>
 
-        <Route path="/resume">
-          <Resume />
-        </Route>
+          <Route path="/resume">
+            <Resume />
+          </Route>
 
-        <Route path="/contactme">
-          <ContactMe />
-        </Route>
-      </Switch>
-      <Footer />
-    </Router>
+          <Route path="/contactme">
+            <ContactMe />
+          </Route>
+        </Switch>
+        <Footer />
+      </Router>
+    </div>
   );
 }
 
