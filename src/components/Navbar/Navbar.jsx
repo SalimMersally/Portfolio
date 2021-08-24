@@ -1,7 +1,50 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 function Navbar() {
+  const currentPage = useLocation().pathname.slice(1);
   const [showMenu, setShowMenu] = useState("hidden");
+  const [buttonsStyle, setButtonStyle] = useState({
+    home: "default",
+    projects: "default",
+    resume: "default",
+    contactme: "default",
+  });
+  const [moobileButtonsStyle, setMobileButtonStyle] = useState({
+    home: "mobileDefault",
+    projects: "mobileDefault",
+    resume: "mobileDefault",
+    contactme: "mobileDefault",
+  });
+
+  const buttonsClass = {
+    inPage: "py-4 px-2 text-blue-500 border-b-4 border-blue-500 font-semibold",
+    default:
+      "py-4 px-2 text-gray-500 font-semibold hover:text-blue-500 transition duration-300",
+    MobileInPage:
+      "block text-sm px-2 py-4 text-white bg-blue-500 font-semibold",
+    mobileDefault:
+      "block text-sm px-2 py-4 hover:bg-blue-500 transition duration-300",
+  };
+
+  useEffect(() => {
+    let newState = {
+      home: "default",
+      projects: "default",
+      resume: "default",
+      contactme: "default",
+    };
+    let mobileNewState = {
+      home: "mobileDefault",
+      projects: "mobileDefault",
+      resume: "mobileDefault",
+      contactme: "mobileDefault",
+    };
+    newState[currentPage === "" ? "home" : currentPage] = "inPage";
+    mobileNewState[currentPage === "" ? "home" : currentPage] = "MobileInPage";
+    setButtonStyle(newState);
+    setMobileButtonStyle(mobileNewState);
+  }, [currentPage]);
 
   return (
     <nav className="bg-white shadow-lg">
@@ -9,40 +52,37 @@ function Navbar() {
         <div className="flex justify-between">
           <div className="flex space-x-7">
             <div>
-              <a href="#" className="flex items-center py-4 px-2">
+              <Link to="/" className="flex items-center py-4 px-2" exact>
                 <span className="font-semibold text-gray-500 text-lg">
-                  Logo
+                  Salim Mersally
                 </span>
-              </a>
+              </Link>
             </div>
           </div>
 
           <div className="flex space-x-7">
             <div className="hidden md:flex items-center space-x-1">
-              <a
-                href=""
-                className="py-4 px-2 text-blue-500 border-b-4 border-blue-500 font-semibold "
-              >
+              <Link to="/" className={buttonsClass[buttonsStyle["home"]]} exact>
                 Home
-              </a>
-              <a
-                href=""
-                className="py-4 px-2 text-gray-500 font-semibold hover:text-blue-500 transition duration-300"
+              </Link>
+              <Link
+                to="/projects"
+                className={buttonsClass[buttonsStyle["projects"]]}
               >
                 Projects
-              </a>
-              <a
-                href=""
-                className="py-4 px-2 text-gray-500 font-semibold hover:text-blue-500 transition duration-300"
+              </Link>
+              <Link
+                to="/resume"
+                className={buttonsClass[buttonsStyle["resume"]]}
               >
                 Resume
-              </a>
-              <a
-                href=""
-                className="py-4 px-2 text-gray-500 font-semibold hover:text-blue-500 transition duration-300"
+              </Link>
+              <Link
+                to="/contactme"
+                className={buttonsClass[buttonsStyle["contactme"]]}
               >
                 Contact
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -78,37 +118,38 @@ function Navbar() {
       {/* Mobile Menu */}
       <div className={"mobile-menu " + showMenu}>
         <ul className="">
-          <li className="active">
-            <a
-              href=""
-              className="block text-sm px-2 py-4 text-white bg-blue-500 font-semibold"
+          <li className={currentPage === "" ? "active" : ""}>
+            <Link
+              to="/"
+              className={buttonsClass[moobileButtonsStyle["home"]]}
+              exact
             >
               Home
-            </a>
+            </Link>
           </li>
-          <li>
-            <a
-              href=""
-              className="block text-sm px-2 py-4 hover:bgbluen-500 transition duration-300"
+          <li className={currentPage === "projects" ? "active" : ""}>
+            <Link
+              to="/projects"
+              className={buttonsClass[moobileButtonsStyle["projects"]]}
             >
               Project
-            </a>
+            </Link>
           </li>
-          <li>
-            <a
-              href=""
-              className="block text-sm px-2 py-4 hover:bg-blue-500 transition duration-300"
+          <li className={currentPage === "resume" ? "active" : ""}>
+            <Link
+              to="/resume"
+              className={buttonsClass[moobileButtonsStyle["resume"]]}
             >
               Resume
-            </a>
+            </Link>
           </li>
-          <li>
-            <a
-              href=""
-              className="block text-sm px-2 py-4 hover:bg-blue-500 transition duration-300"
+          <li className={currentPage === "contactme" ? "active" : ""}>
+            <Link
+              to="/contactme"
+              className={buttonsClass[moobileButtonsStyle["contactme"]]}
             >
               Contact
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
