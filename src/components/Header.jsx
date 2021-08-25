@@ -1,5 +1,8 @@
 import React from "react";
+
+//assets
 import gif from "../assets/coding-freak.gif";
+import cv from "../assets/cv.pdf";
 
 function Header() {
   return (
@@ -17,6 +20,15 @@ function Header() {
           CSS, JavaScript, ReactJS, and NodeJS. I am always striving to learn
           more and expand my skills and knowledge.
         </h2>
+        <div className="m-5">
+          <a
+            href={cv}
+            download="Salim Mersally's CV"
+            className="rounded-md bg-gray-500 hover:bg-blue-500 py-2 px-4 text-white text-lg font-medium"
+          >
+            Download my CV
+          </a>
+        </div>
       </div>
     </div>
   );
