@@ -8,7 +8,7 @@ function Header() {
         <img src={gif} alt="Coding GIF" className="h-auto w-4/5 m-auto" />
       </div>
       <div className="flex flex-col md:w-1/2 w-full p-2 justify-center">
-        <h1 className="text-4xl font-extrabold m-5">
+        <h1 className="text-4xl font-extrabold md:m-5 m-5 mt-0">
           Hello, I'm Salim Al Mersally
         </h1>
         <h2 className="text-xl font-light m-5">

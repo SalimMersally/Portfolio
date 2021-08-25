@@ -13,7 +13,7 @@ function Projects() {
       </div>
 
       <div className="flex flex-wrap justify-around">
-        <div className="flex flex-col w-2/5 shadow-lg rounded-sm my-5 border-2">
+        <div className="flex flex-col md:w-2/5 w-4/5 shadow-lg rounded-sm my-5 border-2">
           <div className="w-full border-b-2">
             <img src={trivia} />
           </div>
@@ -43,29 +43,29 @@ function Projects() {
                 Bootstrap
               </span>
             </div>
-            <div className="pt-2 flex justify-center">
+            <div className="pt-2 flex flex-wrap justify-center">
               <a
                 href="https://js-trivia-leb2.netlify.app/"
                 target="_blank"
-                className="rounded-md bg-gray-500 hover:bg-blue-500 py-2 px-4 text-white text-lg font-medium mx-2"
+                className="rounded-md bg-gray-500 hover:bg-blue-500 py-2 px-4 text-white text-lg font-medium mx-2 mt-2"
               >
                 Demo &#10132;
               </a>
               <a
                 href="https://github.com/Lebanon-02-WBC-Capstones/js-trivia-web"
                 target="_blank"
-                className="flex rounded-md bg-gray-500 hover:bg-blue-500 py-2 px-4 text-white text-lg font-medium mx-2"
+                className="flex rounded-md bg-gray-500 hover:bg-blue-500 py-2 px-4 text-white text-lg font-medium mx-2 mt-2"
               >
                 <div>Github</div>
                 <div className="flex items-center h-full ml-1">
-                  <img src={github} className="w-5 githubWhite" />
+                  <img src={github} className="w-5 SVGWhite" />
                 </div>
               </a>
             </div>
           </div>
         </div>
 
-        <div className="flex flex-col w-2/5 shadow-lg my-5 rounded-sm border-2">
+        <div className="flex flex-col md:w-2/5 w-4/5 shadow-lg my-5 rounded-sm border-2">
           <div className="w-full border-b-2">
             <img src={neon} />
           </div>
@@ -92,25 +92,25 @@ function Projects() {
                 Bootstrap
               </span>
             </div>
-          </div>
-          <div className="pt-2 flex justify-center">
-            <a
-              href="https://neonmovies.netlify.app/"
-              target="_blank"
-              className="rounded-md bg-gray-500 hover:bg-blue-500 py-2 px-4 text-white text-lg font-medium mx-2"
-            >
-              Demo &#10132;
-            </a>
-            <a
-              href="https://github.com/SalimMersally/ReCoded-React-Movie-App"
-              target="_blank"
-              className="flex rounded-md bg-gray-500 hover:bg-blue-500 py-2 px-4 text-white text-lg font-medium mx-2"
-            >
-              <div>Github</div>
-              <div className="flex items-center h-full ml-1">
-                <img src={github} className="w-5 githubWhite" />
-              </div>
-            </a>
+            <div className="pt-2 flex flex-wrap justify-center">
+              <a
+                href="https://neonmovies.netlify.app/"
+                target="_blank"
+                className="rounded-md bg-gray-500 hover:bg-blue-500 py-2 px-4 text-white text-lg font-medium mx-2 mt-2"
+              >
+                Demo &#10132;
+              </a>
+              <a
+                href="https://github.com/SalimMersally/ReCoded-React-Movie-App"
+                target="_blank"
+                className="flex rounded-md bg-gray-500 hover:bg-blue-500 py-2 px-4 text-white text-lg font-medium mx-2 mt-2"
+              >
+                <div>Github</div>
+                <div className="flex items-center h-full ml-1">
+                  <img src={github} className="w-5 SVGWhite" />
+                </div>
+              </a>
+            </div>
           </div>
         </div>
       </div>

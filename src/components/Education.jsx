@@ -8,7 +8,7 @@ function Education() {
       </div>
 
       <div className="flex flex-wrap justify-around">
-        <div className="flex flex-col w-2/5 shadow-lg px-10 py-5 my-5 rounded-sm border-2 transform hover:scale-110">
+        <div className="flex flex-col md:w-2/5 w-4/5 shadow-lg px-10 py-5 my-5 rounded-sm border-2 transform hover:scale-110">
           <h2 className="text-xl font-bold text-blue-500">
             Lebanese American University
           </h2>
@@ -32,7 +32,7 @@ function Education() {
           </ul>
         </div>
 
-        <div className="flex flex-col w-2/5 shadow-lg px-10 py-5 my-5 rounded-sm border-2 transform hover:scale-110">
+        <div className="flex flex-col md:w-2/5 w-4/5 shadow-lg px-10 py-5 my-5 rounded-sm border-2 transform hover:scale-110">
           <h2 className="text-xl font-bold text-blue-500">
             Chekka High School
           </h2>
