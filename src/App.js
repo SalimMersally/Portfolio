@@ -13,7 +13,7 @@ import ContactMe from "./components/ContactMe.jsx";
 function App() {
   return (
     <div className="">
-      <div className="flex flex-col h-screen">
+      <div className="flex flex-col md:h-screen">
         <Navbar />
         <Header />
       </div>
