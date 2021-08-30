@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useState, useRef } from "react";
 import emailjs from "emailjs-com";
 
 function ContactMe() {
@@ -15,6 +15,10 @@ function ContactMe() {
       subject: subjectRef.current.value,
       message: messageRef.current.value,
     };
+    firstRef.current.value = "";
+    lastRef.current.value = "";
+    subjectRef.current.value = "";
+    messageRef.current.value = "";
     emailjs
       .send(
         "service_3o4feuo",
